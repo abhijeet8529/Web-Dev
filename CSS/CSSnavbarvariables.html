@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar design</title>
+    
+    
+
+    <style>
+        :root{
+        --Pcolor: rgb(228, 245, 74);
+        --secondaryC: rgb(239, 239, 198);
+        --color: white;
+
+    }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: var(--secondaryC);
+        }
+        nav{
+            background-color: var(--Pcolor);
+        }
+        ul li{
+            color:darkblue;
+            display:inline;
+            margin: 3px;
+            padding:13px;
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            
+
+        }
+        ul li a{
+            text-decoration: none;
+            
+        }
+        a:hover{
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="listbody">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Contacts</a></li>
+            <li><a href="/">About us</a></li>
+            <li><a href="/">Educations</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
