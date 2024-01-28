@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS display property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 3px solid blue;
+        display: inline-block;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .box1 {
+        border: 3px solid red;
+        display: inline-block;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .box2 {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        /* margin: auto; */
+        border: 5px solid rgb(231 86 86);
+        border-radius: 15px;
+        outline: 4px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">this is a box</div>
+    <div class="box1">this is another box</div>
+    <div class="box2">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores illum
+      eos natus, numquam aspernatur delectus tenetur libero voluptas recusandae
+      dignissimos necessitatibus, facere inventore dolore, nostrum magni iste
+      sequi eum dolorem quidem error blanditiis consectetur tempora. Vero eius
+      similique vitae. Libero officiis quis sed in nihil iusto. Temporibus eos
+      officia sint suscipit nesciunt, molestiae cumque voluptatem tenetur.
+    </div>
+    <span> box </span>
+  </body>
+</html>

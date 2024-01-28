@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Quiz test</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            text-align: left;
+            max-width: 400px; /* Set a maximum width for the form */
+            width: 100%;
+        }
+
+        div {
+            margin-bottom: 13px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px; /* Set a width for the labels */
+        }
+
+        input {
+            width: calc(100% - 160px); /* Adjust the width of the input boxes */
+        }
+    </style>
+    <form action="post">
+        <h1><b>Form to submitted - compulsory</b></h1>
+        <div>
+            <label for="name">Enter your name :-</label>
+            <input type="text" id="name" name="name" maxlength="40">
+        </div>
+        <div>
+            <label for="city">city name :-</label>
+            <input type="text" id="city" name="city" maxlength="40">
+        </div>
+        <div>
+            <label for="pincode">Enter your city's pincode :-</label>
+            <input type="number" id="pincode" name="pincode" maxlength="40">
+        </div>
+    </form>
+</head>
+<body>
+    
+</body>
+</html>

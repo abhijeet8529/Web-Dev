@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-selectors</title>
+    <style>
+        /* element selectors */
+        div {
+            background-color: red;
+            color: yellow;
+
+            
+        }
+        /*class selectors */
+        .purple {
+            color: purple;
+            background-color: pink;
+        }
+
+        /*ID selectors */
+        #blacks {
+            color: burlywood;
+            background-color: darkcyan;
+        }
+
+        /*child selectors */
+        div > p {
+            background-color: purple;
+            color: white;
+        }
+
+        /* descendant selectors */
+        div article{
+            color: blue;
+            background-color: yellow;
+        }
+        /* universal selectors */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*psuedo selectors */
+        a:visited{
+            color:yellow;
+        }
+        a:hover{
+            color: blueviolet;
+        }
+        a:active{
+            color: red;
+        }
+        a:link{
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>this is my div</div>
+    <div class="purple">this is my class div</div>
+    <div id="blacks">this is my id div</div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <div>
+        <span>
+            <article>
+                Lorem ipsum dolor sit amet.
+            </article>
+        </span>
+    </div>
+    <a href="https://www.facebook.com">Go to facebook</a>
+    <a href="https://www.tesla.com">Go to tesla</a>
+</body>
+
+</html>
