@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS media query</title>
+    <style>
+      body {
+        background-color: red;
+      }
+
+      @media only screen and (max-width: 433px) {
+        body {
+          background-color: cornflowerblue;
+        }
+        ul  {
+          flex-direction: column;
+        }
+      }
+      ul {
+        display: flex;
+      }
+      ul li {
+        margin: 4px;
+        padding: 4px;
+        list-style: none;
+        border: 3px solid green;
+        height: 200px;
+        width: 300px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div>this is a red body paint</div>
+    <div>
+      <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>contacts</li>
+      </ul>
+    </div>
+  </body>
+</html>
