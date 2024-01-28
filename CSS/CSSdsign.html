@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css design</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    </style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: grey;
+      }
+
+      nav {
+        background-color: rgb(195, 148, 67);
+        position: sticky;
+        top: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+      }
+
+      ul li {
+        color: white;
+        margin: 3px;
+        padding: 10px 30px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      li:hover {
+        cursor: pointer;
+        color: rgb(36, 49, 101);
+      }
+
+      .empty {
+        height: 600px;
+        border: 3px solid rgb(68, 21, 68);
+        background-color: purple;
+        display: flex;
+        justify-content: center;
+      }
+
+      .first {
+        border: 4px solid yellow;
+        background-color: yellow;
+        height: 350px;
+        width: 350px;
+        margin: 25px;
+        padding: 80px 25px;
+      }
+
+      .second {
+        border: 4px solid yellow;
+        background-color: yellow;
+        height: 350px;
+        width: 350px;
+        margin: 25px;
+        padding: 80px 25px;
+      }
+
+      #lasted {
+        background-color: brown;
+
+        display: flex;
+        justify-content: center;
+      }
+
+      span:hover {
+        cursor: pointer;
+        color: yellow;
+      }
+
+      span {
+        margin: 10px;
+        padding: 10px 10px;
+        font-size: 15px;
+        color: white;
+        text-decoration: underline;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .img {
+        height: 50px;
+        display: flex;
+        justify-content: right;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Helps</li>
+        <li>Services</li>
+        <li>Contacts</li>
+      </ul>
+    </nav>
+
+    <div class="empty">
+      <div class="first"></div>
+      <div class="second"></div>
+    </div>
+    <div class="img">
+      <img src="../CSS/IMG_3711-removebg-preview.png" alt="logo.png" />
+    </div>
+    <footer id="lasted">
+      <span>copyrights reserved</span>
+      <span>about us</span>
+      <span>other websites</span>
+    </footer>
+  </body>
+</html>
