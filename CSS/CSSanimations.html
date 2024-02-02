@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animations</title>
+    <style>
+      .container{
+          background-color: greenyellow;
+          height: 50vh;
+          width: 70vw;
+
+      }
+      .box{
+          height: 20px;
+          width: 50px;
+          background-size: blue;
+          /*animation: abhijeetanime;
+          animation-timing-function: ease-in-out;
+          animation-duration: 3s;
+          animation-delay: 1s;
+          animation-iteration-count: infinite;*/
+          /*animation-direction: reverse;
+          animation-play-state: paused;*/
+          /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+          animation: abhijeetanime 2s ease-in-out 1s infinite backwards,
+          newanime 2s ease-in-out 3;
+
+      }
+      @keyframes abhijeetanime{
+          from{
+              background-color: blue;
+          }
+          to{
+              transform: translateX(1000px);
+              background-color: red;
+          }
+      }
+      @keyframes newanime{
+          0%{
+            transform: rotate(50deg)
+          }
+          25%{
+            transform: rotate(100deg)
+          }
+          50%{
+            transform: rotate(150deg)
+          }
+          75%{
+            transform: rotate(200deg)
+          }
+        100%{
+            transform: rotate(250deg)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">box</div>
+    </div>
+  </body>
+</html>
