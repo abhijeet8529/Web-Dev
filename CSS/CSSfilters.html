@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <style>
+        .img{
+            height: 50vh;
+            width:50vw;
+            filter: brightness(2);
+            filter:blur(90);
+            filter: opacity(1);
+            /*filter: invert();*/
+        object-fit: contain;
+       /* object-fit: fill;*/
+        object-position: 10px 30px;
+
+            /*object-fit: contain;*/
+        }
+        .border{
+            height: 50vh;
+            width: 50vw;
+            border: 6px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="border">
+        <img class="img" src="/CSS/images.png.jpg" alt="">
+    </div>
+</body>
+</html>

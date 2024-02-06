@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      .container {
+        background-color: blue;
+        height: 80vh;
+        width: 80vw;
+        position: relative;
+      }
+      .ball {
+       
+        background-color: yellow;
+        height: 80px;
+        width: 80px;
+        border-radius: 60px;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        animation: xaxis 6s linear infinite, yaxis 0.5s ease-out infinite alternate;
+      }
+      @keyframes yaxis {
+        from {
+            bottom: 0;
+        }
+        to {
+          bottom: 100%;
+        }
+      }
+      @keyframes xaxis {
+        from {
+            left: 0;
+        }
+        to {
+            left: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
