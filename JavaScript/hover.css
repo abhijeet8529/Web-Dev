@@ -1,0 +1,25 @@
+ 
+body{
+    
+    transition: background-image 0.5s ease-in-out;
+    }
+.hover{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+
+}
+.img{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./wp13127005-call-of-duty-modern-warfare-3-wallpapers.jpg);
+}  
