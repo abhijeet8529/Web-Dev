@@ -5,15 +5,19 @@ const msg = document.querySelector(".turn");
 const userscore = document.querySelector("#userscore");
 const compscore = document.querySelector("#compscore");
 const btn = document.querySelector('.btn');
+const sb = document.querySelector('.scoreboard');
+const msg1 = document.querySelector('.msg');
 
 
-const resetgame = () =>{
+const resetgame = () => {
+	save();
 	user = 0;
 	comp = 0;
 	userscore.innerText = user;
 	compscore.innerText = comp;
 	msg.innerText = 'Play your move';
 	msg.style.backgroundColor = "white"
+	
 
 }
 
@@ -61,6 +65,7 @@ const playgame = (choiceID) => {
 			userwin = computer === "rock" ? false : true;
 		}
 		showWinner(userwin, choiceID, computer);
+		// save();
 	}
 };
 
@@ -69,7 +74,32 @@ choices.forEach((choice) => {
 		const choiceID = choice.getAttribute("id");
 		console.log("clicked", choiceID);
 		playgame(choiceID);
+		save()
 	});
 });
-
 btn.addEventListener('click', resetgame);
+
+function save() {
+
+	const data = {
+		user: user,
+		comp: comp,
+		msg: msg.innerText
+	}
+	localStorage.setItem("data", JSON.stringify(data));
+}
+
+const show = () => {
+	const data = JSON.parse(localStorage.getItem("data"))
+
+	if (data) {
+		user = data.user;
+		comp = data.comp;
+		userscore.innerText = user;
+		compscore.innerText = comp;
+		msg.innerText = data.msg;
+	}
+}
+
+
+show();
