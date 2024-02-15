@@ -1,19 +1,22 @@
 let inputbox = document.getElementById("inputtag");
 let container = document.getElementById("list-contain");
-function addTask(event) {
-	if (event.key === "Enter") {
-		if (inputbox.value === "") {
-			alert("you must write something");
-		} else {
-			let li = document.createElement("li");
-			li.innerHTML = inputbox.value;
-			container.appendChild(li);
-			let span = document.createElement("span");
-			span.innerHTML = "\u00d7";
-			li.appendChild(span);
-		}
-		inputbox.value = "";
-		saveData();
+function addTask() {
+	if (inputbox.value === "") {
+		alert("you must write something");
+	} else {
+		let li = document.createElement("li");
+		li.innerHTML = inputbox.value;
+		container.appendChild(li);
+		let span = document.createElement("span");
+		span.innerHTML = "\u00d7";
+		li.appendChild(span);
+	}
+	inputbox.value = "";
+	saveData();
+}
+function handleKeyPress(event) {
+	if (event.keyCode === 13) { // Check if Enter key is pressed
+		addTask();
 	}
 }
 
@@ -27,9 +30,7 @@ container.addEventListener(
 			e.target.parentElement.remove();
 			saveData();
 		}
-	},
-	false
-);
+	}, false);
 
 function saveData() {
 	localStorage.setItem("data", container.innerHTML);
@@ -38,4 +39,4 @@ function showTask() {
 	container.innerHTML = localStorage.getItem("data");
 }
 showTask();
-inputbox.addEventListener("keypress", addTask);
+inputbox.addEventListener("keypress", handleKeyPress);
