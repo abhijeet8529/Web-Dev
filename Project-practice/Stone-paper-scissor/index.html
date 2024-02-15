@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stone - Paper - Scissor</title>
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			@import url(https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular);
+			@import url(https://db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+		</style>
+	</head>
+	<body>
+		<h1>Rock - Paper - Scissor</h1>
+		<div class="choices">
+			<div class="c" id="rock">
+				<img src="rock.png" alt="" />
+			</div>
+			<div class="c" id="paper">
+				<img src="paper.svg" alt="" />
+			</div>
+			<div class="c" id="scissor">
+				<img src="sci.png" alt="" />
+			</div>
+		</div>
+		<div class="scoreboard">
+			<div class="score">
+				<p id="userscore">0</p>
+				<p>You</p>
+			</div>
+			<div>
+				<p id="compscore">0</p>
+				<p>Comp</p>
+			</div>
+		</div>
+		<div class="msg">
+			<div class="turn">Play your move</div>
+		</div>
+		<div>
+			<button class="btn">Play Again</button>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
