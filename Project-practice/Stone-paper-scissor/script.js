@@ -10,13 +10,14 @@ const msg1 = document.querySelector('.msg');
 
 
 const resetgame = () => {
-	save();
+	
 	user = 0;
 	comp = 0;
 	userscore.innerText = user;
 	compscore.innerText = comp;
 	msg.innerText = 'Play your move';
 	msg.style.backgroundColor = "white"
+	save();
 	
 
 }
