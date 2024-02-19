@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>This is abhijeet</h1>
+		<button class="stop">Stop</button>
+	</body>
+	<script>
+		/* const sayAbhijeet = function () {
+			console.log("abhijeet sarkar");
+		};*/
+		const changeh1 = setTimeout(function () {
+			document.querySelector("h1").innerText =
+				"javascript course async chapter";
+		}, 2000);
+
+		document.querySelector(".stop").addEventListener("click", function () {
+			clearTimeout(changeh1);
+			console.log("Stopped");
+		});
+
+		/*setTimeout(sayAbhijeet, 2000);*/
+	</script>
+</html>
