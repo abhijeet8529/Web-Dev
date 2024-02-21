@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body></body>
+	<script>
+		/*function createuser(username, price) {
+			this.username = username;
+			this.price = price;
+		}
+
+		createuser.prototype.Price = function () {
+			console.log(`prices for the sandwich is ${this.price}`);
+		};
+		createuser.prototype.increment = function () {
+			price++;
+		};
+		const burger = new createuser("burger", 200);
+		const hamburger = new createuser("hamburger", 500);
+
+		console.log(burger);
+		burger.Price(); */
+
+		/*let myheroes = ["hulk", "spiderman", "batman"];
+
+		let superPower = {
+			hulk: "smash",
+			spiderman: "sling",
+
+			Power: function () {
+				console.log(`the power is ${this.spiderman}`);
+			},
+		};
+		superPower.Power();
+
+		Object.prototype.abhijeet = function (){
+			console.log("this is my name abhijeet");
+		};
+
+		myheroes.abhijeet();*/
+
+		let myname = "abhijeet    ";
+
+		String.prototype.truelength = function () {
+			console.log(this);
+			console.log(`the length is : ${this.trim().length}`);
+		};
+
+		myname.truelength();
+
+		"humangasore".truelength();
+		"modi".truelength();
+
+		let num = 5;
+		Number.prototype.cube = function () {
+			return (this**3);
+		};
+
+		console.log(num.cube())
+	</script>
+</html>

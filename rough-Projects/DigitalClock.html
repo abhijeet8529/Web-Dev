@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			@import url(https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular);
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Gilroy-Regular";
+			}
+			.container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			.banner {
+				margin: 20px;
+				padding-top: 130px;
+				font-size: 50px;
+				text-align: center;
+			}
+			.clock {
+				text-align: center;
+				font-size: 10vw;
+				color: black;
+				border: 2px solid red;
+				height: 24vh;
+				width: 57vw;
+				background-color: orange;
+				border-radius: 10px;
+				box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
+			}
+		</style>
+		<title>Digital clock</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="banner"><span>Digital Clock</span></div>
+			<div class="clock"></div>
+		</div>
+	</body>
+	<script>
+		const clock = document.querySelector(".clock");
+
+		setInterval(function () {
+			const date = new Date();
+			<!-- clock.innerHTML = date.toLocaleTimeString(); -->
+		}, 1000);
+	</script>
+</html>

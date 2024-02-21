@@ -128,13 +128,24 @@
 // console.log(factorial(5));
 
 // let a = prompt("enter your number for factorial :")
-let a = parseInt(prompt("Enter a number:"));
-function facto(n) {
-	let arr = Array.from(Array(n + 1).keys());
-	console.log(arr.slice(1));
-	let c = arr.slice(1).reduce((a, b) => {
-		return a * b;
-	});
-	console.log(c);
+// let a = parseInt(prompt("Enter a number:"));
+// function facto(n) {
+// 	let arr = Array.from(Array(n + 1).keys());
+// 	console.log(arr.slice(1));
+// 	let c = arr.slice(1).reduce((a, b) => {
+// 		return a * b;
+// 	});
+// 	console.log(c);
+// }
+// facto(a);
+
+
+
+function multiplyby5(num){
+	return num*5	
 }
-facto(a);
+
+console.log(multiplyby5(5))
+console.log(multiplyby5.power)
+console.log(multiplyby5.prototype)
+
