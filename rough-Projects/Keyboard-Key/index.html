@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	<style>
+		table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .slider-container {
+    position: relative;
+    width: 100%;
+  }
+  .slider {
+    width: 100%;
+  }
+  .slider-value {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 12px;
+  }
+</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="editor">
+				<table>
+					<tr>
+						<th>Text</th>
+						<th>Font Size</th>
+					</tr>
+					<tr>
+						<div>
+						<td>this is my name</td>
+						<td>
+							<input type="range" min="10" max="80" value="16" class="slider" id="fontsizeslider" />
+							<span class="spanslider" id="slidervalue"></span>
+						</td>
+					</tr>
+					</div>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script>
+		 let fontsize = document.querySelector(".slider")
+		 let spanslider = document.querySelector(".spanslider")
+
+		function increaseFont_size(){
+			let fonts = fontsize.value
+			let text = document.querySelector("td")
+			text.style.fontSize = fonts + "px"
+			spanslider.textContent = fonts
+		}
+
+		fontsize.addEventListener('input', increaseFont_size)
+
+		
+		function throttle(callback, delay) {
+    var previousCall = new Date().getTime();
+    return function() {
+      var time = new Date().getTime();
+      if ((time - previousCall) >= delay) {
+        previousCall = time;
+        callback.apply(null, arguments);
+      }
+    };
+  }
+  var throttledUpdate = throttle(increaseFont_size, 50);
+  fontSize.addEventListener("input", throttledUpdate);
+
+  increaseFont_size();
+	</script>
+</html>

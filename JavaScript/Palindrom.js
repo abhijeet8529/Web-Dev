@@ -18,5 +18,5 @@ arr.forEach(function(word){
         palindromARRAY.push(word)
     }
 })
-
+                                       
 console.log(palindromARRAY);

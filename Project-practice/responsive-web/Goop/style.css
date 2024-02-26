@@ -1,0 +1,165 @@
+@import url(https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular);
+@import url(https://db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Gilroy-Regular";
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+#main {
+	width: 100%;
+	height: 100vh;
+	/* background-color: black; */
+}
+
+#back {
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(0, 0, 0);
+}
+#back img {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+#top {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	/* background-color: rgba(0, 0, 0, 0.598); */
+}
+
+#workingarea {
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1920px;
+	height: 100vh;
+	/* background-color: gray; */
+	/* border: 2px solid red; */
+}
+
+#nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	width: 100%;
+}
+
+#nav img {
+	height: 60px;
+}
+#nleft,
+#nright {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+#nav a {
+	pointer-events: all;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600px;
+	transition: transform 0.3s ease-in-out;
+}
+#nav a:hover {
+	transform: scale(1.4);
+}
+
+#hero {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -50%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	/* height: 100px; */
+	/* background-color: red; */
+}
+
+#heroleft {
+	width: 50%;
+	/* height: 100px; */
+	/* background-color: yellow; */
+}
+
+#heroleft .elem {
+	position: relative;
+	height: 9vw;
+	/* background-color: red; */
+	overflow: hidden;
+}
+#heroleft .elem h1:nth-child(1) {
+	top: 0;
+}
+
+#heroleft .elem h1 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	line-height: 0.9;
+	font-family: "kajiro";
+	color: white;
+	font-weight: 100;
+	font-size: 11vw;
+}
+#heroleft button {
+	pointer-events: all;
+	padding: 0.8vw 3vw;
+	font-size: 3vw;
+	margin-top: 2vw;
+	font-family: "kajiro";
+	transition: transform 0.3s ease-in-out;
+	cursor: pointer;
+}
+#heroleft button:hover {
+	transform: scale(1.1);
+}
+
+#heroright {
+	width: 17%;
+	color: white;
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	align-items: flex-end;
+	/* height: 100px; */
+	/* background-color: green; */
+}
+
+#heroright p {
+	/* margin-bottom: 50px; */
+	text-align: right;
+	font-size: 14px;
+	font-weight: 300;
+}
+#heroright #imagediv {
+	width: 100%;
+	height: 170px;
+	background-image: url(https://india.ray-ban.com/media/wysiwyg/home/Itemaa.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+#heroright p:nth-child(3) {
+	margin-bottom: 100px;
+}

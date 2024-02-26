@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Magic 8 ball</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			html {
+				font-family: "Montserrat", sans-serif;
+				font-size: 16px;
+				color: #454545;
+				margin: 0px;
+				padding: 0px;
+				background-color: #f8f8f8;
+				text-align: center;
+			}
+			h1 {
+				font-family: "Montserrat", sans-serif;
+			}
+			.ball {
+				position: relative;
+			}
+
+			.ball img {
+				width: 100%;
+				max-width: 40em;
+			}
+			.answer {
+				color: #222;
+				text-transform: uppercase;
+				margin: 0;
+				position: absolute;
+				top: 31%;
+				left: 46%;
+				width: 11%;
+				font-size: 89%;
+			}
+			.container {
+				max-width: 960px;
+				min-width: 300px;
+				margin: 0 auto;
+			}
+			.button {
+				font-family: "Montserrat", sans-serif;
+				font-size: 30px;
+				font-size: 1.875em;
+				color: #f8f8f8;
+				background-color: #f16059;
+				border-radius: 5px;
+				border: none;
+				padding: 0.5em 1em;
+				width: 80%;
+				max-width: 15em;
+				margin-top: 1em;
+				cursor: pointer;
+			}
+
+			.shake {
+				animation: shake 0.5s ease-in-out;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Magic <span>8</span> Ball</h1>
+			<div class="ball">
+				<img src="./Magic8ball.png" alt="" class="ball" id="8ball" />
+				<p id="answer" class="answer"></p>
+				<button class="button">Ask Me Anything Putra!</button>
+			</div>
+		</div>
+	</body>
+	<script>
+		const button = document.querySelector(".button");
+		const answer = document.querySelector(".answer");
+
+		let options = [
+			"It is certain",
+			"It is decidedly so",
+			"Without a doubt",
+			"Yes, definitely",
+			"You may rely on it",
+			"As I see it, yes",
+			"Most likely",
+			"Outlook good",
+			"Yes",
+			"Signs point to yes",
+			"Reply hazy, try again",
+			"Ask again later",
+			"Better not tell you now",
+			"Cannot predict now",
+			"Concentrate and ask again",
+			"Don't count on it",
+			"My reply is no",
+			"My sources say no",
+			"Outlook not so good",
+			"Very doubtful",
+		];
+
+		let handle = function (ques) {
+			let randomIdx = Math.floor(Math.random() * options.length);
+			answer.textContent = options[randomIdx];
+		};
+
+		let onClick = function () {
+			let ques = prompt("what do you want to know?");
+			handle(ques);
+		};
+		button.addEventListener("click", onClick);
+	</script>
+</html>

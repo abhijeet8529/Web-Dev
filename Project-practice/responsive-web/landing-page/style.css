@@ -1,0 +1,54 @@
+@import url(https://db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy-Regular);
+@import url(https://db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(151, 253, 26);
+}
+
+#center {
+	position: absolute;
+	/* overflow: hidden; */
+	left: 20%;
+	top: 50%;
+	transform: translate(0%, -50%);
+	width: 70%;
+	height: 80%;
+	/* background-color: red; */
+}
+
+.image_can {
+	position: absolute;
+	overflow: hidden;
+	width: 0%;
+	height: 100%;
+	/* background-color: yellow; */
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.text {
+	position: absolute;
+	bottom: 15%;
+	left: -10%;
+	overflow: hidden;
+	width: 400px;
+	height: 100px;
+	font-family: "Gilroy-Regular";
+	z-index: 999;
+}
+
+.text h1 {
+	font-size: 6vw;
+	top: 100px;
+	position: absolute;
+}
