@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style1.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">Soft landing</div>
+			<div class="hamburger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<nav class="nav_bar">
+				<ul>
+					<li>
+						<a href="" class="active">Home</a>
+					</li>
+					<li>
+						<a href="">Features</a>
+					</li>
+					<li>
+						<a href="">Pricing</a>
+					</li>
+					<li>
+						<a href="">About</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		
+	</body>
+    <script>
+			let hamburger = document.querySelector(".hamburger");
+			hamburger.addEventListener("click", function () {
+				let navbar = document.querySelector(".nav_bar");
+				navbar.classList.toggle("active");
+			});
+		</script>
+</html>

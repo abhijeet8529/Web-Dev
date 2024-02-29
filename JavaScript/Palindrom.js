@@ -9,14 +9,14 @@ function palindrom(word) {
 
 let a = palindrom("racecar");
 console.log(a);
-let arr = ["bob" , "racecar", "kajak", "level","abhijeet"];
+let arr = ["bob", "racecar", "kajak", "level", "abhijeet"];
 
-let palindromARRAY = []
+let palindromARRAY = [];
 
-arr.forEach(function(word){
-    if(palindrom(word)){
-        palindromARRAY.push(word)
-    }
-})
-                                       
+arr.forEach(function (word) {
+	if (palindrom(word)) {
+		palindromARRAY.push(word);
+	}
+});
+
 console.log(palindromARRAY);
