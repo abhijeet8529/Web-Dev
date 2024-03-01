@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>clock</title>
+		<style>
+			html {
+				background: linear-gradient(100deg, red, purple);
+			}
+			.main {
+				font-size: 32px;
+				display: flex;
+				flex: 1;
+				align-items: center;
+				min-height: 100vh;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.clock {
+				padding: 2rem;
+				margin: 50px auto;
+				position: relative;
+				height: 30rem;
+				width: 30rem;
+				border: 10px solid white;
+				border-radius: 50%;
+			}
+			.c {
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+
+			.hand {
+				background: black;
+				width: 50%;
+				height: 6px;
+				position: absolute;
+				top: 50%;
+				transform-origin: 100%;
+				transform: rotate(90deg);
+				transition: all 0.5s;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="clock">
+				<div class="c">
+					<div class="hand hour-hand"></div>
+					<div class="hand minute-hand"></div>
+					<div class="hand second-hand"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		const second = document.querySelector(".second-hand");
+		const minute = document.querySelector(".minute-hand");
+		const hours = document.querySelector(".hour-hand");
+		function setDate() {
+			const now = new Date();
+			const seconds = now.getSeconds();
+			const secDeg = (seconds / 60) * 360 + 90;
+			console.log(seconds);
+
+			if (secDeg == 444) {
+				second.style.transition = "none";
+				setTimeout(function () {
+					second.style.transition = "all 4s";
+				}, 1000);
+			} else if (secDeg > 444) {
+				second.style.transition = "all 4s";
+			}
+
+			second.style.transform = `rotate(${secDeg}deg)`;
+
+			const min = now.getMinutes();
+			const mindeg = (min / 60) * 360 + 90;
+			minute.style.transform = `rotate(${mindeg}deg)`;
+
+			const hour = now.getHours();
+			const hourdeg = (hour / 12) * 360 + 90;
+			hours.style.transform = `rotate(${hourdeg}deg)`;
+		}
+
+		setInterval(setDate, 1000);
+	</script>
+</html>
