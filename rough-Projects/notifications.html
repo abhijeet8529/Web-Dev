@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Notification</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.buttons {
+				margin: 50px;
+			}
+
+			.buttons button {
+				border-radius: 5px;
+				background: #333;
+				color: #fff;
+				width: 120px;
+				height: 60px;
+				outline: 0;
+				border: 0;
+				margin: 5px;
+				cursor: pointer;
+			}
+			.toast-box {
+				display: flex;
+				position: absolute;
+				top: 30px;
+				right: 30px;
+				overflow: hidden;
+				padding: 20px;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+			.toast {
+				width: 400px;
+				height: 80px;
+				background: #fff;
+				font-weight: 500;
+				margin: 15px 0;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+				display: flex;
+				align-items: center;
+				position: relative;
+				transform: translateX(100%);
+				animation: left 0.3s linear forwards;
+			}
+			@keyframes left {
+				100% {
+					transform: translateX(0%);
+				}
+			}
+			.toast i {
+				margin: 0 20px;
+				font-size: 35px;
+				color: green;
+			}
+
+			.toast.error i {
+				color: red;
+			}
+			.toast.Invalid i {
+				color: orange;
+			}
+			.toast::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 5px;
+				background: green;
+				animation: anim 5s linear forwards;
+			}
+
+			.toast.error::after {
+				background: red;
+			}
+			.toast.Invalid::after {
+				background: orange;
+			}
+			@keyframes anim {
+				100% {
+					width: 0%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="buttons">
+			<button onclick="showToast(successmsg)" class="success">Success</button>
+			<button onclick="showToast(errormsg)" class="error">Error</button>
+			<button onclick="showToast(invalidmsg)" class="invalid">Invalid</button>
+		</div>
+		<div class="toast-box"></div>
+	</body>
+	<script>
+		let toastBox = document.querySelector(".toast-box");
+		let successmsg =
+			'<i class="ri-checkbox-circle-fill"></i> successfully submitted';
+		let errormsg = '<i class="ri-close-circle-fill"></i>An error has occurred';
+		let invalidmsg = '<i class="ri-error-warning-fill"></i>Invalid Parameters';
+
+		function showToast(msg) {
+			let toast = document.createElement("div");
+			toast.classList.add("toast");
+			toast.innerHTML = msg;
+			toastBox.appendChild(toast);
+
+			if (msg.includes("error")) {
+				toast.classList.add("error");
+			}
+			if (msg.includes("Invalid")) {
+				toast.classList.add("Invalid");
+			}
+			setTimeout(() => {
+				toast.remove();
+			}, 6000);
+		}
+	</script>
+</html>
