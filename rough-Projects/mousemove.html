@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			h1 {
+				text-shadow: 10 10 0 rgba(0, 0, 0, 1);
+				font-size: 100px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="hero">
+			<h1>What the CSS!</h1>
+		</div>
+		<script>
+			const walk = 100;
+			const hero = document.querySelector(".hero");
+			const text = document.querySelector(".hero h1");
+			function shadow(e) {
+				let x = e.offsetX,
+					y = e.offsetY;
+				
+				
+				const { offsetWidth: width, offsetHeight: height } = hero;
+				console.log(x, y);
+				if (this !== e.target) {
+					x = e.offsetX + e.target.offsetLeft;
+					y = e.offsetY + e.target.offsetTop;
+				}
+				const xwalk = Math.round((x / width) * walk) - walk / 2;
+				const ywalk = Math.round((y / height) * walk) - walk / 2;
+
+				text.style.textShadow = `${xwalk}px ${ywalk}px 0 red`;
+			}
+			hero.addEventListener("change", shadow);
+			hero.addEventListener("mousemove", shadow);
+		</script>
+	</body>
+</html>

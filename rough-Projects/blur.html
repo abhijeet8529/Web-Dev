@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				--spacing: 10px;
+				--blur: 0px;
+				--base: #ffc600;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				text-align: center;
+			}
+			.controls {
+				margin-bottom: 50px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				overflow: hidden;
+			}
+			body {
+				background: var(--base);
+				color: #181616;
+				font-size: 50px;
+			}
+			img {
+				padding: var(--spacing);
+				filter: blur(var(--blur));
+				color: var(--base);
+			}
+			h2 span {
+				color: var(--base);
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Update for css <span>JS</span></h2>
+		<div class="controls">
+			<label for="spacing">Spacing</label>
+			<input
+				type="range"
+				name="spacing"
+				min="10"
+				max="200"
+				value="10"
+				data-sizing="px"
+			/>
+
+			<label for="Blur">Blur</label>
+			<input
+				type="range"
+				name="Blur"
+				min="0"
+				max="25"
+				value="10"
+				data-sizing="px"
+			/>
+
+			<label for="Color">Color</label>
+			<input type="color" name="base" value="#ffc600" />
+
+			<img
+				src="https://images.unsplash.com/photo-1707343843982-f8275f3994c5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				alt=""
+			/>
+		</div>
+		<script>
+			const inputs = document.querySelectorAll(".controls input");
+
+			function handle() {
+				const suffix = this.dataset.sizing || "";
+				const value = this.value + suffix;
+				if(this.name === "Blur"){
+					document.querySelector("img").style.filter = `blur(${value})`;
+				}else{
+					document.documentElement.style.setProperty(
+					`--${this.name}`,
+					this.value + suffix
+				);
+				}
+				
+				console.log(suffix);
+			}
+
+			inputs.forEach((input) => input.addEventListener("change", handle));
+			inputs.forEach((input) => input.addEventListener("mousemove", handle));
+		</script>
+	</body>
+</html>
